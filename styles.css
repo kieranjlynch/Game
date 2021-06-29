@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+@media only screen and (max-width: 480px) {
+  .Page {
+    background-color: white;
+  }
+  .Page .Tally {
+    font-family: "Roboto", sans-serif;
+  }
+  .Page .Tally .Question {
+    font-family: "Roboto", sans-serif;
+  }
+  .Page .Tally .Question .Reset {
+    font-family: "Roboto", sans-serif;
+  }
+  .Page .Tally .Question .Reset .Response {
+    font-family: "Roboto", sans-serif;
+  }
+}
+@media only screen and (min-width: 481px) {
+  .Page {
+    background-color: white;
+  }
+  .Page .Tally {
+    font-family: "Roboto", sans-serif;
+  }
+  .Page .Tally .Question {
+    font-family: "Roboto", sans-serif;
+  }
+  .Page .Tally .Question .Reset {
+    font-family: "Roboto", sans-serif;
+  }
+  .Page .Tally .Question .Reset .Response {
+    font-family: "Roboto", sans-serif;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .Page {
+    background-color: white;
+  }
+  .Page .Tally {
+    font-family: "Roboto", sans-serif;
+  }
+  .Page .Tally .Question {
+    font-family: "Roboto", sans-serif;
+  }
+  .Page .Tally .Question .Reset {
+    font-family: "Roboto", sans-serif;
+  }
+  .Page .Tally .Question .Reset .Response {
+    font-family: "Roboto", sans-serif;
+  }
+}

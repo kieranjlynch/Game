@@ -1,0 +1,88 @@
+@import "./variables.scss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+@media only screen and (max-width: 480px) {
+.Page {
+  background-color: $page__wrapper;
+
+  .Tally {
+    font-family: 'Roboto', sans-serif;
+
+    .Question {
+      font-family: 'Roboto', sans-serif;
+
+        .Reset {
+          font-family: 'Roboto', sans-serif;
+
+          .Response {
+            font-family: 'Roboto', sans-serif;
+          } 
+
+        }
+
+      }  
+
+    }
+
+  }
+
+}
+
+@media only screen and (min-width: 481px) {
+  .Page {
+    background-color: $page__wrapper;
+  
+    .Tally {
+      font-family: 'Roboto', sans-serif;
+  
+      .Question {
+        font-family: 'Roboto', sans-serif;
+  
+          .Reset {
+            font-family: 'Roboto', sans-serif;
+  
+            .Response {
+              font-family: 'Roboto', sans-serif;
+            } 
+  
+          }
+  
+        }  
+  
+      }
+  
+    }
+  
+  }
+
+  @media only screen and (min-width: 1025px) {
+    .Page {
+      background-color: $page__wrapper;
+    
+      .Tally {
+        font-family: 'Roboto', sans-serif;
+    
+        .Question {
+          font-family: 'Roboto', sans-serif;
+    
+            .Reset {
+              font-family: 'Roboto', sans-serif;
+    
+              .Response {
+                font-family: 'Roboto', sans-serif;
+              } 
+    
+            }
+    
+          }  
+    
+        }
+    
+      }
+    
+    }
