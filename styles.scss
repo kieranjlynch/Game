@@ -7,82 +7,96 @@
 }
 
 @media only screen and (max-width: 480px) {
+
 .Page {
   background-color: $page__wrapper;
+  width: 100%;
+  height: 100%;
+}
 
-  .Tally {
+.Question {
+  margin-top: 25%;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+}
+        
+.Response {
+  font-family: 'Roboto', sans-serif;
+  margin-top: 5%;
+  margin-left: 10%;
+} 
+
+
+
+.submit__container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+
+  .submit {
     font-family: 'Roboto', sans-serif;
+    margin-top: 5%;
+    border: 0;
+    background: green;
+    box-shadow: none;
+    border-radius: 0px;
+    padding: 2%;
+    border-radius: 20%;
+    width: 15%;
+    } 
+}
 
-    .Question {
-      font-family: 'Roboto', sans-serif;
+.score-Tally {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 
-        .Reset {
-          font-family: 'Roboto', sans-serif;
+  .score {
+    font-family: 'Roboto', sans-serif;
+  }
 
-          .Response {
-            font-family: 'Roboto', sans-serif;
-          } 
-
-        }
-
-      }  
-
-    }
-
+  .tally {
+    font-family: 'Roboto', sans-serif;
+    margin-left: 5%;
+  }
+}
+  .reset__container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+      .reset {
+        margin-top: 5%;
+        font-family: 'Roboto', sans-serif;
+        border: 0;
+        background: red;
+        box-shadow: none;
+        border-radius: 0px;
+        padding: 2%;
+        border-radius: 20%;
+        width: 15%;
+      }
+  }
+  .countdown {
+    margin-top: 5%;
+    font-family: 'Roboto', sans-serif;
+    padding: 2%;
+    display: flex;
+    justify-content: center;
   }
 
 }
 
 @media only screen and (min-width: 481px) {
-  .Page {
-    background-color: $page__wrapper;
-  
-    .Tally {
-      font-family: 'Roboto', sans-serif;
-  
-      .Question {
-        font-family: 'Roboto', sans-serif;
-  
-          .Reset {
-            font-family: 'Roboto', sans-serif;
-  
-            .Response {
-              font-family: 'Roboto', sans-serif;
-            } 
-  
-          }
-  
-        }  
-  
-      }
-  
-    }
+
   
   }
 
   @media only screen and (min-width: 1025px) {
-    .Page {
-      background-color: $page__wrapper;
-    
-      .Tally {
-        font-family: 'Roboto', sans-serif;
-    
-        .Question {
-          font-family: 'Roboto', sans-serif;
-    
-            .Reset {
-              font-family: 'Roboto', sans-serif;
-    
-              .Response {
-                font-family: 'Roboto', sans-serif;
-              } 
-    
-            }
-    
-          }  
-    
-        }
-    
-      }
+
     
     }
