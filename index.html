@@ -5,27 +5,27 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles.css">
-  <title>Kierans kickass quiz</title>
+  <title>Pub Quiz</title>
 </head>
 <body>
 <div class="Page">
   <h2 class="countdown">10</h2>
-    <H1 class="Question">test question lorem ipsum</H1>
-    <ul>
-      <li class="Response">test answer 1 lorem ipsum</li>
-      <li class="Response">test answer 2  lorem ipsum</li>
-      <li class="Response">test answer 3  lorem ipsum</li>
-      <li class="Response">test answer 4  lorem ipsum</li>
-    </ul>
+  <div class="countdownreset__container">
+    <button class="reset">Reset</button>
+  </div>
+    <H1 class="quizQuestion"></H1>
+    <div class="responseBtnsContainer">
+      <button id="correct" class="quizResponse"></button>
+      <button id="incorrect" class="quizResponse"></button>
+      <button id="incorrect" class="quizResponse"></button>
+      <button id="incorrect" class="quizResponse"></button>
+    </div>
     <div class="submit__container">
       <button class="submit">Submit</button>
     </div>
     <div class="score-Tally">
       <h3 class="score">Your Score</h3>
       <h3 class="tally">0</h3>
-    </div>
-    <div class="reset__container">
-      <button class="reset">Reset</button>
     </div>
 </div>
 <script src="./app.js"></script>

@@ -12,24 +12,37 @@
   background-color: $page__wrapper;
   width: 100%;
   height: 100%;
+  //background-image: url("./pub.jpeg");
 }
 
-.Question {
-  margin-top: 25%;
-  margin-left: auto;
-  margin-right: auto;
+.quizQuestion {
+  margin-top: 15%;
   font-family: 'Roboto', sans-serif;
+  font-size: 25px;
   display: flex;
   justify-content: center;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
 }
         
-.Response {
+.responseBtnsContainer {
   font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
   margin-top: 5%;
-  margin-left: 10%;
+
+  .quizResponse {
+    font-family: 'Roboto', sans-serif;
+    width: 50%;
+    background-color: purple;
+    color: white;
+    box-shadow: none;
+    border-radius: 0px;
+    padding: 2%;
+    border-radius: 20%;
+  }
 } 
-
-
 
 .submit__container {
   width: 100%;
@@ -47,6 +60,7 @@
     padding: 2%;
     border-radius: 20%;
     width: 15%;
+    //color: white;
     } 
 }
 
@@ -54,17 +68,20 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-top: 10%;
 
   .score {
     font-family: 'Roboto', sans-serif;
+    //color: white;
   }
 
   .tally {
     font-family: 'Roboto', sans-serif;
     margin-left: 5%;
+    //color: white;
   }
 }
-  .reset__container {
+  .countdownreset__container {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -79,11 +96,13 @@
         padding: 2%;
         border-radius: 20%;
         width: 15%;
+        //color: white;
       }
   }
   .countdown {
-    margin-top: 5%;
+    margin-top: 10%;
     font-family: 'Roboto', sans-serif;
+    font-size: 60px;
     padding: 2%;
     display: flex;
     justify-content: center;
