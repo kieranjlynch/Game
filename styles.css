@@ -32,15 +32,17 @@
     width: 100%;
   }
   .responseBtnsContainer #responseBtns {
+    font-family: "Roboto", sans-serif;
+    font-size: 25px;
+    margin-top: 5%;
+    border: 0;
+    background-color: green;
     box-shadow: none;
     border-radius: 0px;
-    font-family: "Roboto", sans-serif;
-    width: 50%;
-    background-color: green;
-    color: white;
     padding: 2%;
     border-radius: 20%;
-    margin-bottom: 5%;
+    width: 66%;
+    color: white;
     height: 40px;
   }
 
@@ -52,14 +54,15 @@
   }
   .container__nextQuestion .nextQuestion {
     font-family: "Roboto", sans-serif;
+    font-size: 25px;
     margin-top: 5%;
     border: 0;
-    background: #ae0dcb;
+    background-color: blue;
     box-shadow: none;
     border-radius: 0px;
     padding: 2%;
     border-radius: 20%;
-    width: 50%;
+    width: 66%;
     color: white;
     height: 40px;
   }
