@@ -35,7 +35,7 @@
   align-items: center;
   width: 100%;
 
-  .quizResponse {
+  #responseBtns  {
     box-shadow: none;
     border-radius: 0px;
     font-family: 'Roboto', sans-serif;
@@ -105,14 +105,14 @@
         //color: white;
       }
   }
-  .countdown {
-    margin-top: 10%;
-    font-family: 'Roboto', sans-serif;
-    font-size: 60px;
-    padding: 2%;
-    display: flex;
-    justify-content: center;
-  }
+  // .countdown {
+  //   margin-top: 10%;
+  //   font-family: 'Roboto', sans-serif;
+  //   font-size: 60px;
+  //   padding: 2%;
+  //   display: flex;
+  //   justify-content: center;
+  // }
 
 }
 

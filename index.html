@@ -9,23 +9,22 @@
 </head>
 <body>
 <div class="Page">
-  <h2 class="countdown">10</h2>
+  <div class="score-Tally">
+    <h3 class="score">Your Score</h3>
+    <h3 class="tally">0</h3>
+  </div>
   <div class="countdownreset__container">
     <button class="reset">Reset</button>
   </div>
     <H1 class="quizQuestion"></H1>
     <div class="responseBtnsContainer">
-      <button id="correct" class="quizResponse"></button>
-      <button id="incorrect" class="quizResponse"></button>
-      <button id="incorrect" class="quizResponse"></button>
-      <button id="incorrect" class="quizResponse"></button>
+      <button id="responseBtns" class="answer0"></button>
+      <button id="responseBtns" class="answer1"></button>
+      <button id="responseBtns" class="answer2"></button>
+      <button id="responseBtns" class="answer3"></button>
     </div>
     <div class="container__nextQuestion">
       <button class="nextQuestion">Next Question</button>
-    </div>
-    <div class="score-Tally">
-      <h3 class="score">Your Score</h3>
-      <h3 class="tally">0</h3>
     </div>
 </div>
 <script src="./app.js"></script>
