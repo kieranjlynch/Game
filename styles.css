@@ -26,17 +26,21 @@
     font-family: "Roboto", sans-serif;
     display: flex;
     flex-direction: column;
-    margin-top: 5%;
+    margin-top: 10%;
+    height: 250px;
+    align-items: center;
   }
   .responseBtnsContainer .quizResponse {
     font-family: "Roboto", sans-serif;
-    width: 50%;
+    width: 66%;
     background-color: purple;
     color: white;
     box-shadow: none;
     border-radius: 0px;
     padding: 2%;
     border-radius: 20%;
+    margin-bottom: 5%;
+    height: 60px;
   }
 
   .submit__container {
