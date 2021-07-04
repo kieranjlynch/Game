@@ -123,12 +123,13 @@ flex-direction: row;
     margin-top: 8vh;
     height: 15vh;
     text-align: center;
+    font-size: 2rem;
 }
 
 .choice-container {
   margin-top: 5vh;
-  width: 80vw;
-  margin-left: 10vw;
+  width: 50vw;
+  margin-left: 25vw;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -147,6 +148,18 @@ flex-direction: row;
 #score__container {
 display: flex;
 flex-direction: row;
+
+.score {
+  font-size: 2rem;
+  margin-left: 42vw;
+  margin-top: 5vh;
+}
+
+.tally {
+  font-size: 2rem;
+  margin-left: 5vw;
+  margin-top: 5vh;
+}
 }
 
 .correct {
@@ -157,15 +170,5 @@ flex-direction: row;
   background-color: #dc3545;
 }
 
-.score {
-  font-size: 2rem;
-  margin-left: 34vw;
-  margin-top: 5vh;
-}
 
-.tally {
-  font-size: 2rem;
-  margin-left: 5vw;
-  margin-top: 5vh;
-}
 }
