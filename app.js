@@ -76,3 +76,8 @@ choices.forEach((choice) => {
 
 			const classToApply =
 			selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
+
+
+			if (classToApply === 'correct') {
+				incrementTally(correctAnswer);
+			}
