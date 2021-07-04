@@ -53,3 +53,19 @@ getNewQuestion = () => {
 			localStorage.setItem('mostRecentScore', score);
 	}
 }
+
+const questionIndex = Math.floor(Math.random() * availableQuesions.length);
+currentQuestion = availableQuesions[questionIndex];
+question.innerText = currentQuestion.question;
+
+choices.forEach((choice) => {
+	const number = choice.dataset['number'];
+	choice.innerText = currentQuestion['choice' + number];
+});
+availableQuesions.splice(questionIndex, 1);
+acceptingAnswers = true;
+};
+
+choices.forEach((choice) => {
+	choice.addEventListener('click', (e) => {
+			if (!acceptingAnswers) return;
