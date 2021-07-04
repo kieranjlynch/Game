@@ -4,13 +4,15 @@
   margin: 0;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (min-width: 480px) {
   #question {
     width: 80vw;
     margin-left: 10vw;
     margin-top: 8vh;
-    height: 15vh;
+    height: 3vh;
     text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
   }
 
   .choice-container {
@@ -20,7 +22,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 40vh;
+    height: 50vh;
+    margin-top: 15vh;
   }
 
   .choice__btns {
@@ -30,6 +33,7 @@
     border-radius: 0px;
     background-color: rgba(37, 37, 191, 0.7);
     color: white;
+    font-family: "Roboto", sans-serif;
   }
 
   #score__container {
@@ -38,32 +42,36 @@
   }
 
   .correct {
-    background-color: #28a745;
+    background-color: #27a832;
   }
 
   .incorrect {
-    background-color: #dc3545;
+    background-color: #db3646;
   }
 
   .score {
-    font-size: 2rem;
-    margin-left: 34vw;
+    font-size: 1rem;
+    margin-left: 42%;
     margin-top: 5vh;
+    font-family: "Roboto", sans-serif;
   }
 
   .tally {
-    font-size: 2rem;
+    font-size: 1rem;
     margin-left: 5vw;
     margin-top: 5vh;
+    font-family: "Roboto", sans-serif;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) {
   #question {
     width: 80vw;
     margin-left: 10vw;
     margin-top: 8vh;
-    height: 15vh;
+    height: 5vh;
     text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
   }
 
   .choice-container {
@@ -83,6 +91,8 @@
     border-radius: 0px;
     background-color: rgba(37, 37, 191, 0.7);
     color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
   }
 
   #score__container {
@@ -91,23 +101,90 @@
   }
 
   .correct {
-    background-color: #28a745;
+    background-color: #27a832;
   }
 
   .incorrect {
-    background-color: #dc3545;
+    background-color: #db3646;
   }
 
   .score {
     font-size: 2rem;
-    margin-left: 34vw;
+    margin-left: 0vw;
     margin-top: 5vh;
+    font-family: "Roboto", sans-serif;
   }
 
   .tally {
     font-size: 2rem;
     margin-left: 5vw;
     margin-top: 5vh;
+    font-family: "Roboto", sans-serif;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  #question {
+    width: 80vw;
+    margin-left: 10vw;
+    margin-top: 8vh;
+    height: 20vh;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    font-size: 50px;
+  }
+
+  .choice-container {
+    margin-top: 5vh;
+    width: 80vw;
+    margin-left: 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 40vh;
+  }
+
+  .choice__btns {
+    height: 6vh;
+    background: none;
+    box-shadow: none;
+    border-radius: 0px;
+    background-color: rgba(37, 37, 191, 0.7);
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 2rem;
+  }
+
+  #score__container {
+    display: flex;
+    flex-direction: row;
+    height: 10vh;
+    margin-left: 10%;
+    margin-top: 5vh;
+  }
+
+  .correct {
+    background-color: #27a832;
+  }
+
+  .incorrect {
+    background-color: #db3646;
+  }
+
+  .score {
+    font-size: 2rem;
+    margin-left: 35vw;
+    margin-top: 3vh;
+    font-family: "Roboto", sans-serif;
+    font-size: 40px;
+  }
+
+  .tally {
+    font-size: 2rem;
+    margin-left: 5vw;
+    margin-top: 3vh;
+    font-family: "Roboto", sans-serif;
+    font-size: 40px;
   }
 }
 @media only screen and (max-width: 1680px) {
@@ -118,7 +195,7 @@
     margin-bottom: 10vh;
     height: 15vh;
     text-align: center;
-    font-size: 2rem;
+    font-family: "Roboto", sans-serif;
   }
 
   .choice-container {
@@ -138,6 +215,7 @@
     border-radius: 0px;
     background-color: rgba(37, 37, 191, 0.7);
     color: white;
+    font-family: "Roboto", sans-serif;
   }
 
   #score__container {
@@ -145,21 +223,25 @@
     flex-direction: row;
     width: 100%;
     align-items: center;
-    margin-left: 5%;
+    text-align: center;
+    margin-left: 42%;
     margin-top: 5vh;
   }
   #score__container .score {
     font-size: 2rem;
+    font-family: "Roboto", sans-serif;
   }
   #score__container .tally {
     font-size: 2rem;
+    font-family: "Roboto", sans-serif;
+    margin-left: 3%;
   }
 
   .correct {
-    background-color: #28a745;
+    background-color: #27a832;
   }
 
   .incorrect {
-    background-color: #dc3545;
+    background-color: #db3646;
   }
 }
