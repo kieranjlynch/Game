@@ -52,3 +52,32 @@ getNewQuestion = function getNewQuestion() {
     localStorage.setItem('mostRecentScore', score);
   }
 };
+
+var questionIndex = Math.floor(Math.random() * availableQuesions.length);
+currentQuestion = availableQuesions[questionIndex];
+question.innerText = currentQuestion.question;
+choices.forEach(function (choice) {
+  var number = choice.dataset['number'];
+  choice.innerText = currentQuestion['choice' + number];
+});
+availableQuesions.splice(questionIndex, 1);
+acceptingAnswers = true;
+choices.forEach(function (choice) {
+  choice.addEventListener('click', function (e) {
+    if (!acceptingAnswers) return;
+    acceptingAnswers = false;
+    var selectedChoice = e.target;
+    var selectedAnswer = selectedChoice.dataset['number'];
+    var classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
+
+    if (classToApply === 'correct') {
+      incrementTally(correctAnswer);
+    }
+
+    selectedChoice.classList.add(classToApply);
+    setTimeout(function () {
+      selectedChoice.classList.remove(classToApply);
+      getNewQuestion();
+    }, 1000);
+  });
+});

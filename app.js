@@ -81,3 +81,12 @@ choices.forEach((choice) => {
 			if (classToApply === 'correct') {
 				incrementTally(correctAnswer);
 			}
+
+			selectedChoice.classList.add(classToApply);
+
+			setTimeout(() => {
+				selectedChoice.classList.remove(classToApply);
+				getNewQuestion();
+		}, 1000);
+});
+});
