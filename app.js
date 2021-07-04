@@ -64,8 +64,10 @@ choices.forEach((choice) => {
 });
 availableQuesions.splice(questionIndex, 1);
 acceptingAnswers = true;
-};
+
 
 choices.forEach((choice) => {
 	choice.addEventListener('click', (e) => {
 			if (!acceptingAnswers) return;
+
+			acceptingAnswers = false;
