@@ -1,36 +1,41 @@
 "use strict";
 
-fetch("https://opentdb.com/api.php?amount=10&difficulty=medium&type=multiple").then(function (res) {
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
+var question = document.getElementById('question');
+var choices = Array.from(document.getElementsByClassName('choice__btns'));
+var scoreText = document.getElementById('score');
+var currentQuestion = {};
+var acceptingAnswers = false;
+var score = 0;
+var questionCounter = 0;
+var availableQuesions = [];
+var questions = [];
+fetch('https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple').then(function (res) {
   return res.json();
-}).then(function (data) {
-  document.querySelector(".quizQuestion").innerHTML = data.results[0].question; // document.querySelector("#correct").innerHTML = data.results[0].correct_answer;
-
-  var incorrectAnswers = data.results[0].incorrect_answers;
-  var answersObj = incorrectAnswers.map(function (incorrect_answers) {
-    var incorrectObj = {
-      value: incorrect_answers
+}).then(function (loadedQuestions) {
+  questions = loadedQuestions.results.map(function (loadedQuestion) {
+    var formattedQuestion = {
+      question: loadedQuestion.question
     };
-    return incorrectObj;
+
+    var answerChoices = _toConsumableArray(loadedQuestion.incorrect_answers);
+
+    formattedQuestion.answer = Math.floor(Math.random() * 4) + 1;
+    answerChoices.splice(formattedQuestion.answer - 1, 0, loadedQuestion.correct_answer);
+    answerChoices.forEach(function (choice, index) {
+      formattedQuestion['choice' + (index + 1)] = choice;
+    });
+    return formattedQuestion;
   });
-  answersObj.push({
-    value: data.results[0].correct_answer
-  });
-
-  var shuffle = function shuffle(answersObj) {
-    var oldElement;
-
-    for (var i = answersObj.length - 1; i > 0; i--) {
-      var rand = Math.floor(Math.random() * (i + 1));
-      oldElement = incorrectAnswersObj[i];
-      answersObj[i] = answersObj[rand];
-      answersObj[rand] = oldElement;
-    }
-
-    return answersObj;
-  };
-
-  document.querySelector(".answer0").innerHTML = answersObj[0].value;
-  document.querySelector(".answer1").innerHTML = answersObj[1].value;
-  document.querySelector(".answer2").innerHTML = answersObj[2].value;
-  document.querySelector(".answer3").innerHTML = answersObj[3].value;
+  startGame();
+})["catch"](function (err) {
+  console.error(err);
 });
+var correctAnswer = 1;
