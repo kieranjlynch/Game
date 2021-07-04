@@ -39,3 +39,10 @@ fetch('https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=mul
   console.error(err);
 });
 var correctAnswer = 1;
+
+startGame = function startGame() {
+  questionCounter = 0;
+  score = 0;
+  availableQuesions = _toConsumableArray(questions);
+  getNewQuestion();
+};

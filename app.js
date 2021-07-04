@@ -40,3 +40,10 @@ fetch(
     });
 
 const correctAnswer = 1;
+
+startGame = () => {
+	questionCounter = 0;
+	score = 0;
+	availableQuesions = [...questions];
+	getNewQuestion();
+};
