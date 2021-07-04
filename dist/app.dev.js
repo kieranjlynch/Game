@@ -49,19 +49,23 @@ startGame = function startGame() {
 
 getNewQuestion = function getNewQuestion() {
   if (availableQuesions.length === 0) {
-    localStorage.setItem('mostRecentScore', score);
+    localStorage.setItem('mostRecentScore', score); //go to the end page
+
+    return window.location.assign('/end.html');
   }
+
+  questionCounter++;
+  var questionIndex = Math.floor(Math.random() * availableQuesions.length);
+  currentQuestion = availableQuesions[questionIndex];
+  question.innerText = currentQuestion.question;
+  choices.forEach(function (choice) {
+    var number = choice.dataset['number'];
+    choice.innerText = currentQuestion['choice' + number];
+  });
+  availableQuesions.splice(questionIndex, 1);
+  acceptingAnswers = true;
 };
 
-var questionIndex = Math.floor(Math.random() * availableQuesions.length);
-currentQuestion = availableQuesions[questionIndex];
-question.innerText = currentQuestion.question;
-choices.forEach(function (choice) {
-  var number = choice.dataset['number'];
-  choice.innerText = currentQuestion['choice' + number];
-});
-availableQuesions.splice(questionIndex, 1);
-acceptingAnswers = true;
 choices.forEach(function (choice) {
   choice.addEventListener('click', function (e) {
     if (!acceptingAnswers) return;
@@ -74,9 +78,9 @@ choices.forEach(function (choice) {
       incrementTally(correctAnswer);
     }
 
-    selectedChoice.classList.add(classToApply);
+    selectedChoice.parentElement.classList.add(classToApply);
     setTimeout(function () {
-      selectedChoice.classList.remove(classToApply);
+      selectedChoice.parentElement.classList.remove(classToApply);
       getNewQuestion();
     }, 1000);
   });
