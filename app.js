@@ -90,3 +90,8 @@ choices.forEach((choice) => {
 		}, 1000);
 });
 });
+
+incrementTally = (num) => {
+	score += num;
+	scoreText.innerText = score;
+};

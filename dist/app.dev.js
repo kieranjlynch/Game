@@ -81,3 +81,8 @@ choices.forEach(function (choice) {
     }, 1000);
   });
 });
+
+incrementTally = function incrementTally(num) {
+  score += num;
+  scoreText.innerText = score;
+};
