@@ -46,3 +46,9 @@ startGame = function startGame() {
   availableQuesions = _toConsumableArray(questions);
   getNewQuestion();
 };
+
+getNewQuestion = function getNewQuestion() {
+  if (availableQuesions.length === 0) {
+    localStorage.setItem('mostRecentScore', score);
+  }
+};
