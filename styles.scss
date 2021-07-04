@@ -30,8 +30,8 @@
   background: none;
   box-shadow: none;
   border-radius: 0px;
-  background-color: rgba(37, 37, 191, 0.7);
-  color: white;
+  background-color: $btn__colour;
+  color: $btn__text-colour
 }
 
 #score__container {
@@ -40,11 +40,11 @@ flex-direction: row;
 }
 
 .correct {
-  background-color: #28a745;
+  background-color: $correct__colour;
 }
 
 .incorrect {
-  background-color: #dc3545;
+  background-color: $incorrect__colour;
 }
 
 .score {
@@ -85,8 +85,8 @@ flex-direction: row;
   background: none;
   box-shadow: none;
   border-radius: 0px;
-  background-color: rgba(37, 37, 191, 0.7);
-  color: white;
+  background-color: $btn__colour;
+  color: $btn__text-colour
 }
 
 #score__container {
@@ -95,11 +95,11 @@ flex-direction: row;
 }
 
 .correct {
-  background-color: #28a745;
+  background-color: $correct__colour;
 }
 
 .incorrect {
-  background-color: #dc3545;
+  background-color: $incorrect__colour;
 }
 
 .score {
@@ -142,8 +142,8 @@ flex-direction: row;
   background: none;
   box-shadow: none;
   border-radius: 0px;
-  background-color: rgba(37, 37, 191, 0.7);
-  color: white;
+  background-color: $btn__colour;
+  color: $btn__text-colour
 }
 
 #score__container {
@@ -164,11 +164,11 @@ margin-top: 5vh;
 }
 
 .correct {
-  background-color: #28a745;
+  background-color: $correct__colour;
 }
 
 .incorrect {
-  background-color: #dc3545;
+  background-color: $incorrect__colour;
 }
 
 
