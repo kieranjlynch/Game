@@ -57,7 +57,7 @@
 
 .reset {
   height: 4vh;
-  width: 12vw;
+  width: 15vw;
   background: none;
   box-shadow: none;
   border-radius: 16px;
@@ -65,33 +65,45 @@
   border: 2px solid black;
   font-family: 'Roboto', sans-serif;
   font-size: 10px;
+  padding: 10px;
 }
 
-#score__container {
+.score__container {
 display: flex;
 flex-direction: row;
-}
-
-.correct {
-  background-color: $correct__colour;
-}
-
-.incorrect {
-  background-color: $incorrect__colour;
-}
+padding-top: 5vh;
 
 .score {
   font-size: 20px;
-  margin-left: 40%;
-  margin-top: 5vh;
+  margin-left: 20%;
   font-family: 'Roboto', sans-serif;
 }
 
 .tally {
   font-size: 20px;
   margin-left: 5vw;
-  margin-top: 5vh;
+  margin-right: 5vw;
   font-family: 'Roboto', sans-serif;
+  }
+
+  .time {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    margin-right: 5vw;
+  }
+
+  .countdown {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+  }
+}
+
+.correct {
+  background-color: $correct__colour;
+  }
+
+.incorrect {
+  background-color: $incorrect__colour;
   }
 }
 
@@ -175,7 +187,7 @@ flex-direction: row;
   
   .reset {
     height: 4vh;
-    width: 12vw;
+    width: 15vw;
     background: none;
     box-shadow: none;
     border-radius: 16px;
@@ -184,6 +196,4 @@ flex-direction: row;
     font-family: 'Roboto', sans-serif;
     font-size: 25px;
   }
-
 }
-

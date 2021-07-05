@@ -54,7 +54,7 @@
 
   .reset {
     height: 4vh;
-    width: 12vw;
+    width: 15vw;
     background: none;
     box-shadow: none;
     border-radius: 16px;
@@ -62,11 +62,33 @@
     border: 2px solid black;
     font-family: "Roboto", sans-serif;
     font-size: 10px;
+    padding: 10px;
   }
 
-  #score__container {
+  .score__container {
     display: flex;
     flex-direction: row;
+    padding-top: 5vh;
+  }
+  .score__container .score {
+    font-size: 20px;
+    margin-left: 20%;
+    font-family: "Roboto", sans-serif;
+  }
+  .score__container .tally {
+    font-size: 20px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    font-family: "Roboto", sans-serif;
+  }
+  .score__container .time {
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    margin-right: 5vw;
+  }
+  .score__container .countdown {
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
   }
 
   .correct {
@@ -75,20 +97,6 @@
 
   .incorrect {
     background-color: #db3646;
-  }
-
-  .score {
-    font-size: 20px;
-    margin-left: 40%;
-    margin-top: 5vh;
-    font-family: "Roboto", sans-serif;
-  }
-
-  .tally {
-    font-size: 20px;
-    margin-left: 5vw;
-    margin-top: 5vh;
-    font-family: "Roboto", sans-serif;
   }
 }
 @media only screen and (min-width: 813px) {
@@ -169,7 +177,7 @@
 
   .reset {
     height: 4vh;
-    width: 12vw;
+    width: 15vw;
     background: none;
     box-shadow: none;
     border-radius: 16px;

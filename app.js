@@ -53,9 +53,10 @@ fetch(
 			return formattedQuestion;
 		});
 		startGame();
+		countDown();
 	})
-	.catch((err) => {
-		console.error(err);
+	.catch((error) => {
+
 	});
 
 const correctAnswer = 1;
@@ -131,3 +132,19 @@ incrementTally = (num) => {
 function reloadThePage(){
 	window.location.reload();
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const timeLeftDisplay = document.querySelector('#time-left');
+  let timeLeft = 30;
+
+  countDown = () => {
+    setInterval(function() {
+      if (timeLeft <= 0) {
+        return window.location.assign("end.html");
+      } else {
+        timeLeftDisplay.innerHTML = timeLeft;
+      timeLeft -= 1;
+      }
+    }, 1000);
+  };
+});

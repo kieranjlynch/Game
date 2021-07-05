@@ -45,9 +45,8 @@ fetch('https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=mul
     return formattedQuestion;
   });
   startGame();
-})["catch"](function (err) {
-  console.error(err);
-});
+  countDown();
+})["catch"](function (error) {});
 var correctAnswer = 1; // set question and score to zero and trigger the get new question function
 
 startGame = function startGame() {
@@ -114,3 +113,19 @@ incrementTally = function incrementTally(num) {
 function reloadThePage() {
   window.location.reload();
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+  var timeLeftDisplay = document.querySelector('#time-left');
+  var timeLeft = 30;
+
+  countDown = function countDown() {
+    setInterval(function () {
+      if (timeLeft <= 0) {
+        return window.location.assign("end.html");
+      } else {
+        timeLeftDisplay.innerHTML = timeLeft;
+        timeLeft -= 1;
+      }
+    }, 1000);
+  };
+});
