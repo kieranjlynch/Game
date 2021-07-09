@@ -118,15 +118,16 @@ padding-top: 5vh;
   #question {
     width: 80vw;
     margin-left: 10vw;
-    margin-top: 8vh;
+    margin-top: 6vh;
+    margin-bottom: 2vh;
     height: 3vh;
     text-align: center;
     font-family: 'Roboto', sans-serif;
-    font-size: 45px;
+    font-size: 50px;
 }
 
 .choice-container {
-  margin-top: 10%;
+  margin-top: 5vh;
   width: 80vw;
   margin-left: 10vw;
   display: flex;
@@ -141,59 +142,68 @@ padding-top: 5vh;
   background: none;
   box-shadow: none;
   border-radius: 16px;
-
   color: $btn__text-colour;
   border: 2px solid black;
   font-family: 'Roboto', sans-serif;
   font-size: 30px;
 }
 
-#score__container {
+.reset__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 5vh;
+}
+
+.reset {
+  height: 4vh;
+  width: 15vw;
+  background: none;
+  box-shadow: none;
+  border-radius: 16px;
+  color: $btn__text-colour;
+  border: 2px solid black;
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  padding: 10px;
+}
+
+.score__container {
 display: flex;
 flex-direction: row;
+padding-top: 5vh;
+
+.score {
+  font-size: 40px;
+  margin-left: 27%;
+  font-family: 'Roboto', sans-serif;
+}
+
+.tally {
+  font-size: 40px;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  font-family: 'Roboto', sans-serif;
+  }
+
+  .time {
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    margin-right: 5vw;
+  }
+
+  .countdown {
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+  }
 }
 
 .correct {
   background-color: $correct__colour;
-}
+  }
 
 .incorrect {
   background-color: $incorrect__colour;
-}
-
-.score {
-  font-size: 20px;
-  margin-left: 43%;
-  margin-top: 5vh;
-  font-family: 'Roboto', sans-serif;
-  font-size: 40px;
-}
-
-.tally {
-  font-size: 20px;
-  margin-left: 5vw;
-  margin-top: 5vh;
-  font-family: 'Roboto', sans-serif;
-  font-size: 40px;
-  }
-
-  .reset__container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin-top: 5vh;
-  }
-  
-  .reset {
-    height: 4vh;
-    width: 15vw;
-    background: none;
-    box-shadow: none;
-    border-radius: 16px;
-    color: $btn__text-colour;
-    border: 2px solid black;
-    font-family: 'Roboto', sans-serif;
-    font-size: 25px;
   }
 }

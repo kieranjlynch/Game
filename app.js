@@ -31,11 +31,12 @@ fetch(
 		return res.json();
 	})
 	.then((loadedQuestions) => {
+		//sets the empty questions arr = a map of the key value pairs of loaded question
 		questions = loadedQuestions.results.map((loadedQuestion) => {
 			const formattedQuestion = {
-				question: loadedQuestion.question,
+				question: loadedQuestion.question
 			};
-
+// use spread operator to take each of the items in the arr and put them into a new array as a full copy
 			const answerChoices = [...loadedQuestion.incorrect_answers];
 			//set equal to largest integer less than or equal to the sum of a random number in the range 0 to less than 1 * 4 + 1
 			formattedQuestion.answer = Math.floor(Math.random() * 4) + 1;
@@ -46,21 +47,22 @@ fetch(
 				0,
 				loadedQuestion.correct_answer
 			);
-
+// runs for each on answer choices, to list each arr item, then sets the formatted question arr = choice 
 			answerChoices.forEach((choice, index) => {
 				formattedQuestion['choice' + (index + 1)] = choice;
 			});
+			//returns formatted question variable
+			console.log(formattedQuestion)
 			return formattedQuestion;
 		});
 		startGame();
-		countDown();
+		// countDown();
 	})
-	.catch((error) => {
-
-	});
+	.catch(err => {
+		alert(err)
+	})
 
 const correctAnswer = 1;
-
 
 // set question and score to zero and trigger the get new question function
 startGame = () => {
@@ -71,12 +73,11 @@ startGame = () => {
 	getNewQuestion();
 };
 
-// 
 getNewQuestion = () => {
 	// if the number of questions in the arr is 0 show end page 
 	if (availableQuesions.length === 0) {
 		localStorage.setItem('mostRecentScore', score);
-		//go to the end page (once built)
+		//go to the end page 
 		return window.location.assign('/end.html');
 	}
 	//increment the question counter
@@ -84,12 +85,11 @@ getNewQuestion = () => {
 
 	const questionIndex = Math.floor(Math.random() * availableQuesions.length);
 	currentQuestion = availableQuesions[questionIndex];
-	question.innerText = currentQuestion.question;
-
+	question.innerHTML = currentQuestion.question;
 
 	choices.forEach((choice) => {
 		const number = choice.dataset['number'];
-		choice.innerText = currentQuestion['choice' + number];
+		choice.innerHTML = currentQuestion['choice' + number];
 	});
 // prevents using a question we have already used by splicing it out
 	availableQuesions.splice(questionIndex, 1);
@@ -125,14 +125,18 @@ choices.forEach((choice) => {
 
 //increments the tally for each correctly answered question
 incrementTally = (num) => {
+	//addition assignment operator of current score + num
 	score += num;
+	//sets the html to update the new number
 	scoreText.innerText = score;
 };
 
+//reset function with no cache
 function reloadThePage(){
 	window.location.reload();
 }
 
+// loads the countdown timer on window load
 document.addEventListener('DOMContentLoaded', () => {
   const timeLeftDisplay = document.querySelector('#time-left');
   let timeLeft = 30;

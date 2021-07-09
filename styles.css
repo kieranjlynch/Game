@@ -109,15 +109,16 @@
   #question {
     width: 80vw;
     margin-left: 10vw;
-    margin-top: 8vh;
+    margin-top: 6vh;
+    margin-bottom: 2vh;
     height: 3vh;
     text-align: center;
     font-family: "Roboto", sans-serif;
-    font-size: 45px;
+    font-size: 50px;
   }
 
   .choice-container {
-    margin-top: 10%;
+    margin-top: 5vh;
     width: 80vw;
     margin-left: 10vw;
     display: flex;
@@ -138,35 +139,6 @@
     font-size: 30px;
   }
 
-  #score__container {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .correct {
-    background-color: #27a832;
-  }
-
-  .incorrect {
-    background-color: #db3646;
-  }
-
-  .score {
-    font-size: 20px;
-    margin-left: 43%;
-    margin-top: 5vh;
-    font-family: "Roboto", sans-serif;
-    font-size: 40px;
-  }
-
-  .tally {
-    font-size: 20px;
-    margin-left: 5vw;
-    margin-top: 5vh;
-    font-family: "Roboto", sans-serif;
-    font-size: 40px;
-  }
-
   .reset__container {
     display: flex;
     align-items: center;
@@ -184,6 +156,41 @@
     color: black;
     border: 2px solid black;
     font-family: "Roboto", sans-serif;
-    font-size: 25px;
+    font-size: 30px;
+    padding: 10px;
+  }
+
+  .score__container {
+    display: flex;
+    flex-direction: row;
+    padding-top: 5vh;
+  }
+  .score__container .score {
+    font-size: 40px;
+    margin-left: 27%;
+    font-family: "Roboto", sans-serif;
+  }
+  .score__container .tally {
+    font-size: 40px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    font-family: "Roboto", sans-serif;
+  }
+  .score__container .time {
+    font-family: "Roboto", sans-serif;
+    font-size: 40px;
+    margin-right: 5vw;
+  }
+  .score__container .countdown {
+    font-family: "Roboto", sans-serif;
+    font-size: 40px;
+  }
+
+  .correct {
+    background-color: #27a832;
+  }
+
+  .incorrect {
+    background-color: #db3646;
   }
 }
